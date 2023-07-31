@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Quiz</title>
+</head>
+<body>
+    <nav>
+        <h1>Quiz sobre Tecnologia</h1>
+    </nav>
+    <div class="container">
+        <div id="pergunta1">
+            <p id="nomeParagrafo"></p>
+            <script>
+                // Recuperar o nome do local storage
+                var nome = localStorage.getItem('userName');
+              
+                // Exibir o nome no parágrafo
+                if (nome) {
+                  document.getElementById('nomeParagrafo').textContent = 'Olá, ' + nome + '! Seja bem vindo.';
+                }
+              </script>
+            <h1>Pergunta 1</h1>
+            <p>Qual foi o nome do primeiro computador do mundo</p>
+            <div class="options">
+                <button onclick="responder('a')">a) ENIAC</button>
+                <button onclick="responder('b')">b) Apple I</button>
+                <button onclick="responder('c')">c) IBM 5150</button>
+                <button onclick="responder('d')">d) Altair 8800</button>
+              </div>
+              <p id="err" style="color: black;"></p>
+              <button style="display: none;" id="button">Proxima questão</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>feito por <a href="">Gabriel Augusto</a><ion-icon name="heart" style="color: red; animation: pulse 0.8s infinite;"></ion-icon></p>
+    </footer>
+
+    <style>
+        @keyframes pulse {
+            0% {
+                opacity: 0.3;
+            }
+
+            100%{
+                opacity: 0.9;
+            }
+        }
+    </style>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
