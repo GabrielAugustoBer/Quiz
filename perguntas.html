@@ -11,28 +11,18 @@
         <h1>Quiz sobre Tecnologia</h1>
     </nav>
     <div class="container">
-        <div id="pergunta1">
-            <p id="nomeParagrafo"></p>
-            <script>
-                // Recuperar o nome do local storage
-                var nome = localStorage.getItem('userName');
-              
-                // Exibir o nome no parágrafo
-                if (nome) {
-                  document.getElementById('nomeParagrafo').textContent = 'Olá, ' + nome + '! Seja bem vindo.';
-                }
-              </script>
-            <h1>Pergunta 1</h1>
-            <p>Qual foi o nome do primeiro computador do mundo</p>
-            <div class="options">
-                <button onclick="responder('a')">a) ENIAC</button>
-                <button onclick="responder('b')">b) Apple I</button>
-                <button onclick="responder('c')">c) IBM 5150</button>
-                <button onclick="responder('d')">d) Altair 8800</button>
-              </div>
-              <p id="err" style="color: black;"></p>
-              <button style="display: none;" id="button">Proxima questão</button>
-            </div>
+        <div id="quiz">
+            <div id="question"></div>
+            <div id="options"></div>
+            <p id="err" style="color: black;"></p>
+            <button id="submit" onclick="proximaPergunta()" style="display: none;">Próxima Pergunta</button>
+        </div>
+        <div id="result" style="display: none;">
+            <h1>Resultado</h1>
+            <p>Pontuação: <span id="score"></span></p>
+            <p>Compartilhe seu resultado com seus amigos:</p>
+            <input type="text" id="url" readonly>
+            <button onclick="copiarLink()">Copiar Link</button>
         </div>
     </div>
     <footer>
@@ -44,15 +34,15 @@
             0% {
                 opacity: 0.3;
             }
-
             100%{
                 opacity: 0.9;
             }
         }
     </style>
 
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
