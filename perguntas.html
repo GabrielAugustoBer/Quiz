@@ -8,15 +8,28 @@
 </head>
 <body>
     <nav>
-        <h1>Quiz sobre Tecnologia</h1>
+        <h1 style="color: white;">Quiz sobre Tecnologia</h1>
     </nav>
     <div class="container">
+
         <div id="quiz">
             <div id="question"></div>
             <div id="options"></div>
             <p id="err" style="color: black;"></p>
+
+            <div id="custom-popup">
+                <div id="custom-popup-content">
+                    <h2>Resposta Correta!</h2>
+                    <p>Parabéns! Você acertou a resposta!</p>
+                    <img src="" alt="" id="explanation-image">
+                    <p id="explanation-text"></p>
+                    <button onclick="fecharPopup()">Fechar</button>
+                </div>
+            </div>
+            
             <button id="submit" onclick="proximaPergunta()" style="display: none;">Próxima Pergunta</button>
         </div>
+
         <div id="result" style="display: none;">
             <h1>Resultado</h1>
             <p>Pontuação: <span id="score"></span></p>
@@ -24,25 +37,14 @@
             <input type="text" id="url" readonly>
             <button onclick="copiarLink()">Copiar Link</button>
         </div>
+        
     </div>
+
     <footer>
         <p>feito por <a href="">Gabriel Augusto</a><ion-icon name="heart" style="color: red; animation: pulse 0.8s infinite;"></ion-icon></p>
     </footer>
-
-    <style>
-        @keyframes pulse {
-            0% {
-                opacity: 0.3;
-            }
-            100%{
-                opacity: 0.9;
-            }
-        }
-    </style>
-
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
