@@ -11,7 +11,15 @@
         <h1 style="color: white;">Quiz sobre Tecnologia</h1>
     </nav>
     <div class="container">
+        <h1>Bem vindo <span id="serName"></span></h1>
 
+
+        <script>
+        const nomeArmazenado = localStorage.getItem('userName');
+        const resultadoSpan = document.getElementById('serName');
+        resultadoSpan.textContent = nomeArmazenado;
+        </script>
+    
         <div id="quiz">
             <div id="question"></div>
             <div id="options"></div>
