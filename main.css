@@ -23,9 +23,33 @@ body {
     padding: 14px;
 }
 
+.container h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 300;
+}
+
+.container h1 span {
+    color: rgba(255, 0, 0, 0.74);
+}
+
 .container #question {
+    font-size:larger;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
+}
+
+.container #options button {
+    margin: 5px;
+    cursor: pointer;
+    display: grid;
+    border: 0px;
+    padding: 3.9px;
+    border-radius: 1.25rem;
+}
+
+.container #options button:hover {
+    color: white;
+    background-color: #0099ff;
 }
 
 @keyframes pulse {
@@ -37,7 +61,23 @@ body {
     }
 }
 
-/* Estilos do Pop-up Personalizado */
+footer p, a {
+    text-align: center;
+    color: white;
+}
+
+footer p a:hover {
+    color: rgba(255, 255, 255, 0.534);
+}
+
+
+
+
+
+
+
+
+
 #custom-popup {
     position: fixed;
     top: 50%;
@@ -68,5 +108,3 @@ body {
     border-radius: 5px;
     cursor: pointer;
 }
-
-/* ... (outros estilos CSS) ... */

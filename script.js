@@ -1,19 +1,47 @@
 const quizData = [
   {
-      question: "Qual foi o nome do primeiro computador do mundo?",
-      options: ["ENIAC", "Apple I", "IBM 5150", "Altair 8800"],
-      answer: "ENIAC",
-      explanationText: "O primeiro computador do mundo foi o ENIAC (Electronic Numerical Integrator and Computer), criado em 1945.",
-      explanationImage: "url_da_imagem1.jpg"
-  },
+    question: "Qual foi o nome do primeiro computador do mundo?",
+    options: ["ENIAC", "Apple I", "IBM 5150", "Altair 8800"],
+    answer: "ENIAC",
+    explanationText: "O primeiro computador do mundo foi o ENIAC (Electronic Numerical Integrator and Computer), criado em 1945.",
+    explanationImage: "./assets/foto_eniac.png"
+    },
   {
       question: "Qual empresa desenvolveu o sistema operacional Windows?",
       options: ["Apple", "Microsoft", "IBM", "Google"],
       answer: "Microsoft",
       explanationText: "O sistema operacional Windows foi desenvolvido pela Microsoft.",
       explanationImage: "url_da_imagem2.jpg"
-  },
-  // Adicione mais perguntas aqui...
+    },
+  {
+      question: "O que é Internet das Coisas (IoT)?",
+      options: ["Um tipo de conexão de Internet extremamente rápida.", " A interconexão de dispositivos físicos com a Internet.", "Um programa de edição de documentos e planilhas.", " Uma rede de comunicação exclusiva para dispositivos móveis."],
+      answer: "A interconexão de dispositivos físicos com a Internet.",
+      explanationText: "A Internet das Coisas (IoT) refere-se à conexão de dispositivos físicos (como eletrodomésticos, veículos, sensores industriais, entre outros) à Internet. Isso permite que esses dispositivos coletem e troquem dados, realizem tarefas e se comuniquem entre si, possibilitando maior automação e controle remoto de várias funcionalidades.",
+      explanationImage: ""
+    },
+  {
+      question: " O que é inteligência artificial?",
+      options: ["Um software usado para editar imagens e vídeos.", "Um campo da ciência da computação que estuda a forma como os computadores funcionam.", " Uma tecnologia que permite que os computadores aprendam com experiências anteriores e tomem decisões inteligentes.", " Um tipo de tela de alta resolução utilizada em dispositivos móveis."],
+      answer: "Uma tecnologia que permite que os computadores aprendam com experiências anteriores e tomem decisões inteligentes.",
+      explanationText: "A inteligência artificial (IA) é um campo da ciência da computação que se concentra no desenvolvimento de sistemas e máquinas capazes de realizar tarefas que normalmente exigiriam inteligência humana. Essas tarefas incluem aprendizado, raciocínio, reconhecimento de padrões, resolução de problemas e tomada de decisões. A IA pode ser aplicada em diversas áreas, como chatbots, carros autônomos, assistentes virtuais e análise de dados.",
+      explanationImage: ""
+    },
+  {
+      question: " O que é computação em nuvem?",
+      options: ["Um tipo de computador com hardware de alto desempenho.", "Um sistema operacional desenvolvido pela Microsoft.", "Uma forma de fornecer serviços de computação pela Internet, sob demanda.", "Um tipo de armazenamento offline para proteger dados confidenciais."],
+      answer: "Uma forma de fornecer serviços de computação pela Internet, sob demanda.",
+      explanationText: "A computação em nuvem é um modelo de prestação de serviços de computação pela Internet, onde recursos como armazenamento, servidores, redes e aplicativos são disponibilizados de forma sob demanda. Os usuários podem acessar esses recursos remotamente, pagando apenas pelo que utilizam, sem a necessidade de possuir infraestrutura física local.",
+      explanationImage: ""
+   },
+   {
+    question: "O que é aprendizado de máquina (machine learning)?",
+    options: ["Um conjunto de instruções utilizadas para programar computadores.", " Uma técnica de desenvolvimento de software para criar interfaces de usuário.", "", ""],
+    answer: "",
+    explanationText: "",
+    explanationImage: ""
+},
+
 ];
 
 

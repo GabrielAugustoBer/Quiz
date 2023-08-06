@@ -8,18 +8,10 @@
 </head>
 <body>
     <nav>
-        <h1 style="color: white;">Quiz sobre Tecnologia</h1>
+        <!--logo-->
+        <!--voltar ao inicio -->
     </nav>
     <div class="container">
-        <h1>Bem vindo <span id="serName"></span></h1>
-
-
-        <script>
-        const nomeArmazenado = localStorage.getItem('userName');
-        const resultadoSpan = document.getElementById('serName');
-        resultadoSpan.textContent = nomeArmazenado;
-        </script>
-    
         <div id="quiz">
             <div id="question"></div>
             <div id="options"></div>
@@ -28,8 +20,13 @@
             <div id="custom-popup">
                 <div id="custom-popup-content">
                     <h2>Resposta Correta!</h2>
-                    <p>Parabéns! Você acertou a resposta!</p>
-                    <img src="" alt="" id="explanation-image">
+                    <p>Parabéns <span id="userName"></span>! Você acertou a resposta!</p>
+                    <script>
+                        const nomeArmazenado = localStorage.getItem('userName');
+                        const resultadoSpan = document.getElementById('userName');
+                        resultadoSpan.textContent = nomeArmazenado;
+                        </script>
+                    <img src="" alt="Imagem inlustrativa" id="explanation-image" style="width: 300px; height: 200px;">
                     <p id="explanation-text"></p>
                     <button onclick="fecharPopup()">Fechar</button>
                 </div>
@@ -49,7 +46,7 @@
     </div>
 
     <footer>
-        <p>feito por <a href="">Gabriel Augusto</a><ion-icon name="heart" style="color: red; animation: pulse 0.8s infinite;"></ion-icon></p>
+        <p>Feito por <a href="https://github.com/GabrielAugustoBer" target="_blank">Gabriel Augusto</a><ion-icon name="heart" style="color: red; animation: pulse 0.8s infinite;"></ion-icon></p>
     </footer>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
