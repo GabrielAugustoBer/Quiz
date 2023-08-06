@@ -103,7 +103,8 @@ function mostrarResultado() {
   quizContainer.style.display = 'none';
   resultContainer.style.display = 'block';
   scoreSpan.textContent = score + " de " + quizData.length + " perguntas.";
-  const urlAtual = window.location.href = './Login/index.html';
+
+  const urlAtual = window.location.href;
   const urlComPontuacao = urlAtual + '?score=' + score;
   urlInput.value = urlComPontuacao;
 }

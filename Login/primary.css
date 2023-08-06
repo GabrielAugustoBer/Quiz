@@ -1,49 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');
-/* font-family: 'Poppins', sans-serif; */
-
 * {
     margin: 0;
     box-sizing: border-box;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
 }
 
-body {
-  justify-content: center; /* Centraliza horizontalmente todo o conteúdo do body */
-  align-items: center; /* Centraliza verticalmente todo o conteúdo do body */
-  height: 100vh; /* Faz o body ocupar 100% da altura da viewport (tela visível) */
-  display: flex;
-}
 
 .container {
-    justify-content: center;
     background-color: #c2c2c2;
-    margin: 0 auto;
+    margin: 15px;
     padding: 25px;
     display: grid;
     width: 560px;
-    height: 210px;
+    height: 180px;
     align-items: center;
     border-radius: 24px 24px 24px 24px;
     -moz-border-radius: 24px 24px 24px 24px;
     -webkit-border-radius: 24px 24px 24px 24px;
     -webkit-box-shadow: 10px 10px 50px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 50px 0px rgba(0,0,0,0.75);
-    box-shadow: 10px 10px 50px 0px rgba(0,0,0,0.75)
+-moz-box-shadow: 10px 10px 50px 0px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 50px 0px rgba(0,0,0,0.75)
 }
 
 .container input {
-    border: 0px;
-    border-radius: 1.25rem;
-    height: 30px;
     text-align: center;
     align-items: center;
     width: 230px;
     margin: 10px;
-}
-
-.container input:hover {
-    transform: scale(1.02);
 }
 
 .container button {
@@ -51,14 +33,4 @@ body {
     align-items: center;
     text-align: center;
     width: 230px;
-    height: 30px;
-    text-decoration: none;
-    border: 0px;
-    border-radius: 1.25rem;
-}
-
-.container button:hover {
-    color: white;
-    background-color: rgb(91, 91, 255);
-    transform: scale(1.02);
 }
