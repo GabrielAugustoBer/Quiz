@@ -1,24 +1,29 @@
 
 document.getElementById('name').addEventListener('input', function() {
     var input = this.value;
-    var err = document.getElementById('err');
     var btn = document.getElementById('btn');
 
 if (input === '') {
-    err.textContent = 'Insira seu nome';
+    trocarPlaceholder();
     btn.style.display = 'none';
 } else {
-    err.textContent = '';
     btn.style.display = 'block';
 }
 });
+  
+
+function trocarPlaceholder() {
+    var inputElement = document.getElementById("name");
+    if (inputElement) {
+      inputElement.placeholder = "Insira um nome válido";
+    }
+}
 
 document.getElementById('btn').addEventListener('click', function() {
     var input = document.getElementById('name').value;
 
 if (input !== '') {
-    // Armazenar o nome no local storage
     localStorage.setItem('userName', input);
-    window.location.href = 'perguntas.html';
+    window.location.href = './../perguntas.html';
     }
   });

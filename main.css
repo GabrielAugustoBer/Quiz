@@ -28,6 +28,34 @@ body {
     font-weight: 600;
 }
 
+.container #options button {
+    display: grid;
+    margin: 10px;
+    border: 1px solid blue;
+    background-color: blue;
+    border-radius: 7px;
+    padding: 2.5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.container #options button:hover {
+    transform: scale(1.04);
+}
+
+footer p {
+    color: white;
+    text-align: center;
+}
+
+footer p a {
+    color: white;
+}
+
+footer p a:hover {
+    color: rgba(255, 255, 255, 0.671);
+}
+
 @keyframes pulse {
     0% {
         opacity: 0.3;
@@ -68,5 +96,3 @@ body {
     border-radius: 5px;
     cursor: pointer;
 }
-
-/* ... (outros estilos CSS) ... */
