@@ -33,14 +33,22 @@ const quizData = [
       answer: "Uma forma de fornecer serviços de computação pela Internet, sob demanda.",
       explanationText: "A computação em nuvem é um modelo de prestação de serviços de computação pela Internet, onde recursos como armazenamento, servidores, redes e aplicativos são disponibilizados de forma sob demanda. Os usuários podem acessar esses recursos remotamente, pagando apenas pelo que utilizam, sem a necessidade de possuir infraestrutura física local.",
       explanationImage: ""
-   },
-   {
+    },
+  {
     question: "O que é aprendizado de máquina (machine learning)?",
-    options: ["Um conjunto de instruções utilizadas para programar computadores.", " Uma técnica de desenvolvimento de software para criar interfaces de usuário.", "", ""],
-    answer: "",
-    explanationText: "",
+    options: ["Um conjunto de instruções utilizadas para programar computadores.", " Uma técnica de desenvolvimento de software para criar interfaces de usuário.", " Um campo da inteligência artificial que permite que computadores aprendam a partir de dados e melhorem suas próprias habilidades.", "Uma tecnologia que permite que dispositivos se conectem à Internet sem fio."],
+    answer: " Um campo da inteligência artificial que permite que computadores aprendam a partir de dados e melhorem suas próprias habilidades.",
+    explanationText: "Aprendizado de máquina (machine learning) é um subcampo da inteligência artificial que envolve o desenvolvimento de algoritmos e técnicas que permitem que os computadores aprendam a partir de dados e melhorem seu desempenho em tarefas específicas sem serem explicitamente programados para isso. Esses algoritmos utilizam padrões e informações nos dados para fazer previsões ou tomar decisões.",
     explanationImage: ""
-},
+    },
+  {
+      question: " O que é 5G?",
+      options: ["A quinta geração de processadores para computadores.", "Um sistema operacional para smartphones.", " Um padrão de rede de comunicação móvel que oferece velocidades de Internet mais rápidas e maior capacidade de conexão.", " Um tipo de dispositivo de realidade virtual avançado."],
+      answer: "Um padrão de rede de comunicação móvel que oferece velocidades de Internet mais rápidas e maior capacidade de conexão.",
+      explanationText: " 5G é a quinta geração de padrões de rede de comunicação móvel. Essa tecnologia oferece velocidades de Internet significativamente mais rápidas em comparação com as gerações anteriores, como o 4G, bem como maior capacidade de conexão para suportar um número maior de dispositivos conectados simultaneamente. O 5G é fundamental para possibilitar o desenvolvimento de tecnologias como carros autônomos, internet das coisas em larga escala e comunicações avançadas.",
+      explanationImage: ""
+    },
+
 
 ];
 
