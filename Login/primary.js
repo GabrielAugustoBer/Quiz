@@ -19,6 +19,6 @@ document.getElementById('btn').addEventListener('click', function() {
 if (input !== '') {
     // Armazenar o nome no local storage
     localStorage.setItem('userName', input);
-    window.location.href = 'perguntas.html';
+    window.location.href = '../main/';
     }
   });

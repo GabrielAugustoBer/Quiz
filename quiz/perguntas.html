@@ -21,12 +21,14 @@
                 <div id="custom-popup-content">
                     <h2>Resposta Correta!</h2>
                     <p>Parabéns <span id="userName"></span>! Você acertou a resposta!</p>
+
                     <script>
                         const nomeArmazenado = localStorage.getItem('userName');
                         const resultadoSpan = document.getElementById('userName');
                         resultadoSpan.textContent = nomeArmazenado;
-                        </script>
-                    <img src="" alt="Imagem inlustrativa" id="explanation-image" style="width: 300px; height: 200px;">
+                    </script>
+
+                    <img src="" alt="Imagem de explicação da pergunta" id="explanation-image" style="width: 300px; height: 200px;">
                     <p id="explanation-text"></p>
                     <button onclick="fecharPopup()">Fechar</button>
                 </div>

@@ -10,6 +10,11 @@
     --cor-body: #202124;
     --cor-cont: rgb(248, 248, 248);
     --cor-font: #222222;
+    --cor-span: rgba(255, 0, 0, 0.74);
+    --cor-btnHover: rgb(255, 255, 255);
+    --cor-footerHover: rgba(255, 255, 255, 0.534);
+    --cor-footer: rgb(255, 255, 255);
+    --cor-backBtn: rgb(206, 206, 206);
 }
 
 body {
@@ -29,17 +34,19 @@ body {
 }
 
 .container h1 span {
-    color: rgba(255, 0, 0, 0.74);
+    color: var(--cor-span);
 }
 
 .container #question {
-    font-size:larger;
+    padding-bottom: 10px;
+    font-size: larger;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
 }
 
 .container #options button {
-    margin: 5px;
+    background-color: var(--cor-backBtn);
+    margin-bottom: 10px;
     cursor: pointer;
     display: grid;
     border: 0px;
@@ -47,14 +54,25 @@ body {
     border-radius: 1.25rem;
 }
 
+.container button#submit {
+    cursor: pointer;
+    border: 0px;
+    background-color: var(--cor-backBtn);
+    border-radius: 1.25rem;
+    padding: 3.9px;
+}
+
 .container #options button:hover {
-    color: white;
+    color: var(--cor-btnHover);
     background-color: #0099ff;
 }
 
 @keyframes pulse {
     0% {
         opacity: 0.3;
+    }
+    50% {
+        opacity: 0.5;
     }
     100%{
         opacity: 0.9;
@@ -63,11 +81,11 @@ body {
 
 footer p, a {
     text-align: center;
-    color: white;
+    color: var(--cor-footer);
 }
 
 footer p a:hover {
-    color: rgba(255, 255, 255, 0.534);
+    color: var(--cor-footHover)
 }
 
 
@@ -84,7 +102,7 @@ footer p a:hover {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.8);
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
@@ -102,7 +120,7 @@ footer p a:hover {
 
 #custom-popup button {
     background-color: #3498db;
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
