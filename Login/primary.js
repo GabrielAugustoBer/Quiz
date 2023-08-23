@@ -1,24 +1,49 @@
-
-document.getElementById('name').addEventListener('input', function() {
-    var input = this.value;
+document.addEventListener('DOMContentLoaded', function() {
+    var select = document.getElementById('selectDificulty');
+    var nameInput = document.getElementById('name');
     var err = document.getElementById('err');
-    var btn = document.getElementById('btn');
+    var submitButton = document.getElementById('submitButton');
 
-if (input === '') {
-    err.textContent = 'Insira seu nome';
-    btn.style.display = 'none';
-} else {
-    err.textContent = '';
-    btn.style.display = 'block';
-}
-});
+    function updateButtonVisibility() {
+        var selectedValue = select.value;
+        var inputValue = nameInput.value;
 
-document.getElementById('btn').addEventListener('click', function() {
-    var input = document.getElementById('name').value;
+        if (selectedValue !== '' && inputValue !== '') {
+            submitButton.style.display = 'block';
+        } else {
+            submitButton.style.display = 'none';
+        }
 
-if (input !== '') {
-    // Armazenar o nome no local storage
-    localStorage.setItem('userName', input);
-    window.location.href = '../main/';
+        // Armazenar a opção selecionada no localStorage
+        localStorage.setItem('selectedOption', selectedValue);
     }
-  });
+
+    // Carregar opção anteriormente selecionada (se houver) do localStorage
+    var storedOption = localStorage.getItem('selectedOption');
+    if (storedOption) {
+        select.value = storedOption;
+    }
+
+    select.addEventListener('change', updateButtonVisibility);
+    nameInput.addEventListener('input', function() {
+        var input = this.value;
+
+        if (input === '') {
+            err.textContent = 'Insira seu nome';
+            submitButton.style.display = 'none';
+        } else {
+            err.textContent = '';
+            updateButtonVisibility(); // Chama a função para atualizar o botão junto com o nome
+        }
+    });
+
+    submitButton.addEventListener('click', function() {
+        var input = nameInput.value;
+
+        if (input !== '') {
+            // Armazenar o nome no localStorage
+            localStorage.setItem('userName', input);
+            window.location.href = '../quiz/perguntas.html';
+        }
+    });
+});

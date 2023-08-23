@@ -8,14 +8,33 @@
 </head>
 <body>
     <div class="container">
-        <label> Insira seu nome</label>
+        <img src="../assets/logo.png" alt="" style="margin-left: 140px;">
+        <label style="text-align: left;">Insira seu nome</label>
         <input type="text" id="name">
-        <span id="err"></span>    
-        <button id="btn" style="display: none;">Enviar</button>
+        <span id="err"></span>
+        <span style="animation: pulse 1s infinite; color: red;">Não salvamos seus resultados.*</span>  
+        <label>Selecione a dificuldade</label>
+        <select name="select" id="selectDificulty">
+            <option value="">Selecione</option>
+            <option value="easy">Fácil</option>
+            <option value="medium">Médio</option>
+            <option value="hard">Difícil</option>
+        </select>
+        <button id="submitButton" style="display: none;">Entrar</button>
     </div>
 
+    <style>
+        @keyframes pulse {
+            0% {
+                opacity: 0.3;
+            }
+            100% {
+                opacity: 0.9;
+            }
+        }
+    </style>
 
-
+    
 <script src="primary.js"></script>
 </body>
 </html>

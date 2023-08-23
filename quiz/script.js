@@ -61,7 +61,6 @@ const quizData = [
     },
 ];
 
-
 const quizContainer = document.getElementById('quiz');
 const questionContainer = document.getElementById('question');
 const optionsContainer = document.getElementById('options');
@@ -73,27 +72,55 @@ const urlInput = document.getElementById('url');
 
 let currentQuestionIndex = 0;
 let score = 0;
+let selectedDifficulty = null;
+
+// Event listeners para os botões de dificuldade
+const easyButton = document.getElementById('easy');
+const mediumButton = document.getElementById('medium');
+const hardButton = document.getElementById('hard');
+
+easyButton.addEventListener('click', () => setDifficulty('fácil'));
+mediumButton.addEventListener('click', () => setDifficulty('médio'));
+hardButton.addEventListener('click', () => setDifficulty('difícil'));
+
+function setDifficulty(difficulty) {
+  selectedDifficulty = difficulty;
+  currentQuestionIndex = 0;
+  score = 0;
+  carregarPergunta();
+}
+
+function filtrarPerguntasPorDificuldade() {
+  if (selectedDifficulty) {
+    return quizData.filter(question => question.dificuldade === selectedDifficulty);
+  } else {
+    return quizData;
+  }
+}
 
 function carregarPergunta() {
-  if (currentQuestionIndex >= quizData.length) {
-      mostrarResultado();
-      return;
+  const perguntasFiltradas = filtrarPerguntasPorDificuldade();
+
+  if (currentQuestionIndex >= perguntasFiltradas.length) {
+    mostrarResultado();
+    return;
   }
 
-  const currentQuestion = quizData[currentQuestionIndex];
+  const currentQuestion = perguntasFiltradas[currentQuestionIndex];
   questionContainer.textContent = `Pergunta ${currentQuestionIndex + 1}: ${currentQuestion.question}`;
   optionsContainer.innerHTML = "";
 
   currentQuestion.options.forEach((option, index) => {
-      const optionElement = document.createElement("button");
-      optionElement.textContent = option;
-      optionElement.addEventListener("click", () => responder(option, index));
-      optionsContainer.appendChild(optionElement);
+    const optionElement = document.createElement("button");
+    optionElement.textContent = option;
+    optionElement.addEventListener("click", () => responder(option, index));
+    optionsContainer.appendChild(optionElement);
   });
 
   errContainer.textContent = "";
   submitButton.style.display = "none";
 }
+
 
 function responder(resposta, index) {
   const currentQuestion = quizData[currentQuestionIndex];
